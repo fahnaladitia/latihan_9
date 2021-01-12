@@ -68,7 +68,7 @@ table tr:nth-child(even) {
                 <th>Brand</th>
                 <th>Made In</th>
                 <th>Price</th>
-                <th>Actions</th>
+                <th sec:authorize="hasAnyAuthority('ADMIN','EDITOR')">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -78,10 +78,10 @@ table tr:nth-child(even) {
                 <td th:text="${product.brand}">Brand</td>
                 <td th:text="${product.madein}">Made In</td>
                 <td th:text="${product.showAmount}">Price</td>
-                <td>
+                <td sec:authorize="hasAnyAuthority('ADMIN','EDITOR')">
                     <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                    <a sec:authorize="hasAnyAuthority('ADMIN')" th:href="@{'/delete/' + ${product.id}}">Delete</a>
                 </td>
             </tr>
         </tbody>
