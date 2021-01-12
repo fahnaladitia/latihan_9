@@ -1,4 +1,4 @@
-package net.latihan.tutorial.Utils;
+package net.latihan.tutorial.utils;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
