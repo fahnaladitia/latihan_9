@@ -1,7 +1,7 @@
 package net.latihan.tutorial.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import net.latihan.tutorial.Utils.Rupiah;
+import net.latihan.tutorial.utils.Rupiah;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
